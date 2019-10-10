@@ -1,0 +1,123 @@
+$color-pink:#ff2782;
+$bg-color:#363b46;
+$color-grey:#696969;
+$color-light-grey:#ececec;
+$color-blue:#0082c0;
+$color-blue-hover:#1a668a;
+
+body {
+	margin : 0;
+	padding : 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.color-pink {
+	color : $color-pink !important;
+}
+.left {
+	float : left;
+}
+
+.header {
+
+	padding:25px 0px;
+	background-color:$bg-color;
+	text-align:center;
+
+	&-wrapper {
+		padding:0 15px;
+	}
+
+	p {
+		font-size: 30px;
+		color: #FFF;
+	}
+
+	span {
+		color : $color-pink;
+		font-size : 18px;
+	 }
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding:15px;
+
+	h1 {
+		color : $color-pink;
+    	font-weight: 300;
+	}
+
+	.row {
+		margin : 30px 0;
+	}
+	.offer {
+		display: block;
+		text-decoration:none;
+		color:#000;
+		position:relative;
+		&:hover{
+			background-color:$color-light-grey;
+		}
+		.card {
+			border:1px grey solid;
+			margin : 20px 0;
+			padding:15px;
+
+			&-title{
+				margin-bottom:5px;
+
+				h3{
+					color:$color-blue;
+					&:hover {text-decoration:underline};
+				}
+
+			}
+
+			&-entreprise{
+
+				clear:both;
+
+				span{
+					text-transform: capitalize;
+					color:$color-grey;
+					padding-right:20px;
+					font-size:15px;
+				}
+
+			}
+
+			&-description{
+				margin-top:5px;
+
+				p{
+					color:$color-grey;
+					font-size: 14px;
+				    line-height: 20px;
+				}
+
+			}
+
+			&-btn {
+				position:absolute;
+				top: 10px;
+    			right: 10px;
+			}
+		}
+
+	}
+
+}
+
+.btn {
+	padding:10px 30px;
+
+	&-submit {
+		color:#FFF;
+		background-color:$color-blue;
+		&:hover {
+			background-color:$color-blue-hover;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Bienvenue{% endblock %}</title>
+        {% block stylesheets %}
+			<link rel="stylesheet" type="text/css" href="{{ asset('build/app.css' )}}">
+        {% endblock %}
+    </head>
+    <body>
+    		<div class="header">
+    			<div class="header-wrapper">
+					<div class="header-menu">
+						<p>Test Technique Nathan Patrie</p>
+						<span>Récupérer les 10 offres d'emploi les plus récentes sur la ville de Bordeaux</span>
+					</div>
+				</div>
+    		</div>
+
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+			<script src="{{ asset('build/app.js' )}}"></script>
+        {% endblock %}
+    </body>
+</html>

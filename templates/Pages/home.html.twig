@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title 'Test Technique' %}
+
+{% block body %}
+
+	<div class="jumbotron text-center">
+
+	</div>
+	<div class="container">
+		<h1>Dernières annonces publiées</h1>
+		<hr>
+		<div class="row">
+			{% for message in app.flashes('error') %}
+	                {{ message }}
+	        {% endfor %}
+
+			{% for offer in offers %}
+				<a href="#" class="offer">
+					<div class="card">
+						<div class="card-title">
+							{% if offer.intitule is defined %}
+							  <h3>{{ offer.intitule }}</h3>
+							{% endif %}
+						</div>
+						<div class="card-entreprise">
+							{% if offer.entreprise.nom is defined %}
+							  <span class="left">Entreprise : <span class="color-pink">{{ offer.entreprise.nom }}</span></span>
+							{% endif %}
+							{% if offer.typeContrat is defined %}
+							  <span class="left">type de contrat : <span class="color-pink">{{ offer.typeContrat }}</span></span>
+							{% endif %}
+							{% if offer.lieuTravail.libelle is defined %}
+							  <span>Lieu : <span class="color-pink">{{ offer.lieuTravail.libelle }}</span></span>
+							{% endif %}
+
+						</div>
+						<div class="card-description">
+							{% if offer.description is defined %}
+							  <p>{{ offer.description | slice(0, 500) ~ '...'}}</p>
+							{% endif %}
+						</div>
+						<div class="btn card-btn btn-submit">Voir l'offre</div>
+					</div>
+				</a>
+
+			{% endfor %}
+		</div>
+
+	</div>
+{% endblock %}
