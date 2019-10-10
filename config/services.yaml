@@ -6,7 +6,6 @@
 parameters:
     client_id: '%env(CLIENT_ID)%'
     client_secret: '%env(CLIENT_SECRET)%'
-    api_name: '%env(API_NAME)%'
     api_scope: '%env(API_SCOPE)%'
 
 services:
