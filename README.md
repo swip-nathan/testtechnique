@@ -1,4 +1,4 @@
-Setup
+INSTALLATION :
 
 composer install
 
