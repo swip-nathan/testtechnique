@@ -26,7 +26,7 @@ class CallApi
                     'grant_type' => 'client_credentials',
                     'client_id' => $this->params->get('client_id'),
                     'client_secret' => $this->params->get('client_secret'),
-                    'scope' => 'application_'.$this->params->get('client_id').' api_'.$this->params->get('api_name').' o2dsoffre',
+                    'scope' => $this->params->get('api_scope'),
 
                     ],
             ]);
