@@ -9,25 +9,33 @@ use App\Service\CallApi;
 
 class HomeController extends AbstractController{
 
+	private $callapi;
+
+    public function __construct(CallApi $callapi)
+    {
+
+        $this->CallApi = $callapi;
+
+    }
 
 	/**
 	* @Route("/", name="home")
 	* @return Response
 	**/
 
-	public function index(CallApi $callapi): Response
+	public function index(): Response
 	{
 		// si le token est renvoyé, faire appel API
-		if ($callapi->getToken())
+		if ( $this->CallApi->getToken())
 		{
 			// token à envoyer à l'API
-			$token = $callapi->getToken();
+			$token =  $this->CallApi->getToken();
 
 			// filtres de la requête GET
 			$filters='range=0-9&sort=1&commune=33063&distance=0&inclureLimitrophes=false';
 
 			// Appel API
-			$offers=$callapi->getrequest($token,$filters);
+			$offers= $this->CallApi->getrequest($token,$filters);
 		}
 		else {
 			$offers=null;
