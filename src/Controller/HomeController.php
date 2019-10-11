@@ -25,6 +25,7 @@ class HomeController extends AbstractController{
 
 	public function index(): Response
 	{
+
 		// si le token est renvoyé, faire appel API
 		if ( $this->CallApi->getToken() )
 		{
