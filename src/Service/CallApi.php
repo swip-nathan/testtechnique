@@ -23,7 +23,7 @@ class CallApi
 
         $response = $this -> httpClient -> request ( 'POST' , 'https://entreprise.pole-emploi.fr/connexion/oauth2/access_token?realm=%2Fpartenaire', [
             'query' =>[
-                    'grant_type' => 'client_credentials',
+                    'grant_type' => 'client_credentialss',
                     'client_id' => $this->params->get('client_id'),
                     'client_secret' => $this->params->get('client_secret'),
                     'scope' => $this->params->get('api_scope'),

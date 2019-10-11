@@ -121,3 +121,16 @@ body {
 		}
 	}
 }
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.message {
+margin: 10px 0px;
+padding:12px;
+
+	&-error{
+		color: #D8000C;
+    	background-color: #FFD2D2;
+	}
+}
+
