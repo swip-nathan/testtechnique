@@ -26,7 +26,7 @@ class HomeController extends AbstractController{
 	public function index(): Response
 	{
 		// si le token est renvoyé, faire appel API
-		if ( $this->CallApi->getToken())
+		if ( $this->CallApi->getToken() )
 		{
 			// token à envoyer à l'API
 			$token =  $this->CallApi->getToken();
@@ -41,7 +41,6 @@ class HomeController extends AbstractController{
 			$offers=null;
 			$this->addFlash('error', 'Une erreur est survenue !');
 		}
-
 
 		return $this->render('pages/home.html.twig',['offers' => $offers['resultats']]);
 	}

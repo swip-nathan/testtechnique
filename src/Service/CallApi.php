@@ -27,7 +27,6 @@ class CallApi
                     'client_id' => $this->params->get('client_id'),
                     'client_secret' => $this->params->get('client_secret'),
                     'scope' => $this->params->get('api_scope'),
-
                     ],
             ]);
 
@@ -49,6 +48,7 @@ class CallApi
                    'Authorization' => 'Bearer '.$token
                    ],
             ]);
+
         $contentType = $response->toArray();
         return $contentType;
 
